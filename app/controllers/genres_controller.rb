@@ -13,7 +13,7 @@ class GenresController < ApplicationController
 
   def create
     @genre = Genre.create(params.require(:genre).permit(:name))
-  
+
     redirect_to genre_path(@genre)
   end
 
